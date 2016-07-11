@@ -13,59 +13,73 @@ module.exports = {
     "plugins": [
         "dollar-sign"
     ],
-    "parserOptions": {
-        // Мы еще не используем ES6 модули,
-        // поэтому эта настройка нужна для того чтобы корректно отрабатывало правило `strict`
-        "sourceType": "script"
-    },
     "rules": {
+        // Отступ у нас по 4 пробела
         "indent": ["error", 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
-        "no-return-assign": 0,
+        // return не должен содержать присвоение,
+        // однако, это не удобно вот в таком случае:
+        // setProperty = (newValue) => property = newValue;
+        // поэтому не ошибка, но предупреждение
+        "no-return-assign": ["warn"],
+        // Максимальная длина строки 120 символов
         "max-len": ["error", 120],
-        // Мы не особо хотим делать так:
-        // const data = [];
-        // data[123] = '3'
-        // Логичнее смотрится:
-        // let data = [];
-        // data[123] = '3'
-        // http://eslint.org/docs/rules/prefer-const
-        "prefer-const": 0,
+        // Не настаиваем на использовании скобок с "толстой стрелкой"
+        // то есть можно вот так:
+        // someArray.filter(item => item.done);
         "arrow-body-style": 0,
+        // Нельзя определять переменные и не использовать их
         "no-unused-expressions": ["error", { "allowShortCircuit": true }],
+        // Можно использовать switch без default
         "default-case": 0,
+        // Это правило описывает наличие пустых строк в начале и конце блока
+        // У нас нет такого обязательного условия
         "padded-blocks": 0,
         // Последовательность в том, что функция возвращает
-        // http://eslint.org/docs/rules/consistent-return
         "consistent-return": ["warn"],
         // Вызывать до декларирования можно функции, ибо hoisting
         "no-use-before-define": ["error", { "functions": false }],
-        "no-confusing-arrow": 0,
+        // "толстая стрелка" очень похожа на операторы сравнения (>, <, <=, и >=)
+        // предупреждаем в случае если код выглядит схоже
+        "no-confusing-arrow": ["warn"],
+        // Правило для правильного написания IIFE
         "wrap-iife": ["error", "inside"],
+        // Запрещаем, некоторые фичи языка:
+        // Не оставляем в коде команду debugger
+        // Не используем with
         "no-restricted-syntax": [
             "error",
             "DebuggerStatement",
             "WithStatement"
         ],
+        // Это правило о присвоении переменным именных функций
+        // У него только два варианта:
+        // функция может быть безымянной
+        // либо может и не быть
+        // отключаем во избежание путаницы
         "func-names": 0,
+        // Без пробела перед скобочками функции
         "space-before-function-paren": ["error", "never"],
+        // После ключевых слов (if, else, for, etc) должен быть хотя бы один пробел
         "keyword-spacing": ["error", {"overrides": {
             "catch": {
                 "after": true
             }
         }}],
+        // В коде не нужно оставлять console.log()
         "no-console": ["error", { "allow": ["warn", "error"] }],
+        // Разрешаем перезаписывать переменные.
+        // Примеры: тесты (прокидываем done), object destructuring (в реакте с редуксом)
         "no-shadow": 0,
 
         // Мы используем AMD модули
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
         "import/no-amd": 0,
-        // Все еще используем 'use strict'
-        // http://eslint.org/docs/rules/strict
-        "strict": ["error", "function"],
+        // Мы подключаем как devDependencies, так и dependencies, проблем с этим нет
+        // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
+        "import/no-extraneous-dependencies": 0,
         // Не обязательно декларировать переменные в начале функции
         "vars-on-top": 0,
         // Мы используем нижнее подчеркивание для "приватных" методов у объектов
-        // http://eslint.org/docs/rules/no-underscore-dangle
         "no-underscore-dangle": 0,
         // Мы не разрешаем пробелы до и после унарных операторов: !, !!, ++, --, ~
         "space-unary-ops": ["error"],
@@ -86,38 +100,17 @@ module.exports = {
         "global-require": 0,
         // Не обязываем переносить каждое звено цепочки на новую строчку
         "newline-per-chained-call": 0,
-        // Не выводим ошибку при переназначении аргументов функции (только предупреждение)
-        // Потому что хотим использовать вот так:
-        // function(options) {
-        //     options = options || {};
-        // }
-        "no-param-reassign": ["warn"],
+        // Ошибка о переназначении аргументов функции
+        "no-param-reassign": ["error", { "props": false }],
         // Не используем кавычки для свойств объектов, только если без них никуда либо это зарезервированное слово
         "quote-props": ["error", "as-needed", {
             "keywords": true
         }],
         // Не выводим ошибку если в цикле for in не проверяется на hasOwnProperty (только предупреждение)
         "guard-for-in": ["warn"],
-
-
-        /*
-         * Ниже перечислены правила, которые нужно убрать после перехода на es6
-         */
-
-        // Запятую в последнем свойстве объекта не ставим
-        // Из-за того, что поддерживаем IE8 - выводим ошибку
-        "comma-dangle": ["error", "never"],
-        // Для колбеков "толстые стрелки" выглядят компактнее,
-        // но у нас много легаси просто с безымянными функциями, поэтому не будем на этом настаивать
-        "prefer-arrow-callback": 0,
-        // Пока не настаиваем на использовании let
-        "no-var": 0,
-        // Пока не настаиваем на использовании ...rest
-        "prefer-rest-params": 0,
-        // Можно без строк шаблонов
-        "prefer-template": 0,
-        // Легаси, не настаиваем на сокращенной форме объекта
-        // http://eslint.org/docs/rules/object-shorthand
-        "object-shorthand": 0
+        // Предупреждаем, если есть пустой блок
+        "no-empty": ["warn"],
+        // Мы используем достаточно простые объекты и у нас нет проблемы с енправильной отработкой hasOwnProperty
+        "no-prototype-builtins": 0
     }
 };
