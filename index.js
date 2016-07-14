@@ -18,19 +18,11 @@ module.exports = {
         "indent": ["error", 4, { "SwitchCase": 1, "VariableDeclarator": 1 }],
         // return не должен содержать присвоение,
         // однако, это не удобно вот в таком случае:
-        // someArray.map(item => foo = item);
+        // setProperty = (newValue) => property = newValue;
         // поэтому не ошибка, но предупреждение
         "no-return-assign": ["warn"],
         // Максимальная длина строки 120 символов
         "max-len": ["error", 120],
-        // Мы не особо хотим делать так:
-        // const data = [];
-        // data[123] = '3'
-        // Логичнее смотрится:
-        // let data = [];
-        // data[123] = '3'
-        // http://eslint.org/docs/rules/prefer-const
-        "prefer-const": 0,
         // Не настаиваем на использовании скобок с "толстой стрелкой"
         // то есть можно вот так:
         // someArray.filter(item => item.done);
@@ -85,7 +77,7 @@ module.exports = {
         // Мы используем AMD модули
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
         "import/no-amd": 0,
-        // Мы подклюаем как devDependencies, так и dependencies, проблем с этим нет
+        // Мы подключаем как devDependencies, так и dependencies, проблем с этим нет
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
         "import/no-extraneous-dependencies": 0,
         // Не обязательно декларировать переменные в начале функции
