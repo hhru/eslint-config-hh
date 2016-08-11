@@ -1,10 +1,14 @@
 {
   "name": "eslint-config-hh",
-  "version": "1.1.0",
+  "version": "1.3.0",
   "main": "index.js",
   "description": "HH.ru eslint configuration",
   "scripts": {},
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hhru/eslint-config-hh"
+  },
   "bugs": {
     "url": "https://github.com/hhru/eslint-config-hh/issues"
   },
