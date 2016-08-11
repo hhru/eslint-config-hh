@@ -103,7 +103,7 @@ module.exports = {
         // Ошибка о переназначении аргументов функции
         "no-param-reassign": ["error", { "props": false }],
         // Не используем кавычки для свойств объектов, только если без них никуда либо это зарезервированное слово
-        "quote-props": ["error", "as-needed", {
+        "quote-props": ["warn", "as-needed", {
             "keywords": true
         }],
         // Не выводим ошибку если в цикле for in не проверяется на hasOwnProperty (только предупреждение)
