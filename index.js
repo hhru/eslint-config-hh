@@ -70,7 +70,6 @@ module.exports = {
         // Разрешаем перезаписывать переменные.
         // Примеры: тесты (прокидываем done), object destructuring (в реакте с редуксом)
         "no-shadow": 0,
-
         // Мы используем AMD модули
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md
         "import/no-amd": 0,
@@ -117,6 +116,9 @@ module.exports = {
         // Иногда нужно просто создать инстанс класса для запуска его внутренней кухни
         "no-new": ["off"],
         // Свойства объектов всегда в camelCase
-        "camelcase": ["error", { "properties": "always" }]
+        "camelcase": ["error", { "properties": "always" }],
+        "no-plusplus": ["warn"],
+        // Не рекомендуется писать операторы `a + b * c` без скобок, но допустимо ввиду большого объема легаси
+        "no-mixed-operators": ["warn"]
     }
 };
