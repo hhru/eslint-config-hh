@@ -6,9 +6,12 @@ module.exports = {
         "yaCounter": true,
         "ignoreCounters": true,
         "jsx": true,
-        "define": true,
-        "jsxComponents": true,
-        "module": true
+        "jsxComponents": true
+    },
+    "env": {
+        "browser": true,
+        "amd": true,
+        "es6": true
     },
     "plugins": [
         "dollar-sign"
