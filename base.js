@@ -116,6 +116,8 @@ module.exports = {
         "camelcase": ["error", { "properties": "always" }],
         "no-plusplus": ["warn"],
         // Не рекомендуется писать операторы `a + b * c` без скобок, но допустимо ввиду большого объема легаси
-        "no-mixed-operators": ["warn"]
+        "no-mixed-operators": ["warn"],
+        // Не рекомендуется использовать continue
+        "no-continue": ["warn"]
     }
 };
