@@ -16,12 +16,6 @@ module.exports = {
     },
     "rules": {
         // Используем 'use strict'
-        "strict": ["error", "function"],
-        // Не выводим ошибку при переназначении аргументов функции (только предупреждение)
-        // Потому что хотим использовать вот так:
-        // function(options) {
-        //     options = options || {};
-        // }
-        "no-param-reassign": ["warn"]
+        "strict": ["error", "function"]
     }
 };
