@@ -16,7 +16,7 @@ module.exports = {
         // однако, это не удобно вот в таком случае:
         // setProperty = (newValue) => property = newValue;
         // поэтому не ошибка, но предупреждение
-        "no-return-assign": ["warn"],
+        "no-return-assign": ["error"],
         // Максимальная длина строки 120 символов
         "max-len": ["error", 120],
         // Не настаиваем на использовании скобок с "толстой стрелкой"
@@ -31,12 +31,12 @@ module.exports = {
         // У нас нет такого обязательного условия
         "padded-blocks": 0,
         // Последовательность в том, что функция возвращает
-        "consistent-return": ["warn"],
+        "consistent-return": ["error"],
         // Вызывать до декларирования можно функции, ибо hoisting
         "no-use-before-define": ["error", { "functions": false }],
         // "толстая стрелка" очень похожа на операторы сравнения (>, <, <=, и >=)
         // предупреждаем в случае если код выглядит схоже
-        "no-confusing-arrow": ["warn"],
+        "no-confusing-arrow": ["error"],
         // Правило для правильного написания IIFE
         "wrap-iife": ["error", "inside"],
         // Запрещаем, некоторые фичи языка:
@@ -97,15 +97,16 @@ module.exports = {
         // Не обязываем переносить каждое звено цепочки на новую строчку
         "newline-per-chained-call": 0,
         // Ошибка о переназначении аргументов функции
-        "no-param-reassign": ["error", { "props": false }],
+        // Используем преимущественно для корректировки входных данных или установки значения по-умолчанию
+        "no-param-reassign": 0,
         // Не используем кавычки для свойств объектов, только если без них никуда либо это зарезервированное слово
         "quote-props": ["error", "as-needed", {
             "keywords": true
         }],
-        // Не выводим ошибку если в цикле for in не проверяется на hasOwnProperty (только предупреждение)
-        "guard-for-in": ["warn"],
+        // Мы практически никогда не итерируемся по объектам-наследникам, поэтому hasOwnProperty избыточен
+        "guard-for-in": 0,
         // Предупреждаем, если есть пустой блок
-        "no-empty": ["warn"],
+        "no-empty": ["error"],
         // Мы используем достаточно простые объекты и у нас нет проблемы с неправильной отработкой hasOwnProperty
         "no-prototype-builtins": 0,
         // Поддерживаем браузеры, в которых ключами не могут быть ключевые слова
@@ -114,8 +115,9 @@ module.exports = {
         "no-new": ["off"],
         // Свойства объектов всегда в camelCase
         "camelcase": ["error", { "properties": "always" }],
-        "no-plusplus": ["warn"],
+        "no-plusplus": ["error"],
         // Не рекомендуется писать операторы `a + b * c` без скобок, но допустимо ввиду большого объема легаси
-        "no-mixed-operators": ["warn"]
+        "no-mixed-operators": ["error", { "allowSamePrecedence": true }],
+        "no-alert": ["error"]
     }
 };
