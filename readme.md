@@ -9,7 +9,7 @@
 Cсылка на конфиг прописывается в `.eslintrc` проекта:
 ```json
 {
-    "extends": "hh"
+    "extends": "@hh.ru/eslint-config"
 }
 ```
 
