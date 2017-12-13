@@ -1,7 +1,7 @@
 {
   "name": "eslint-config-hh",
-  "version": "2.0.0",
-  "main": "index.js",
+  "version": "3.0.0",
+  "main": "base.js",
   "description": "HH.ru eslint configuration",
   "scripts": {},
   "license": "MIT",
@@ -14,7 +14,6 @@
   },
   "homepage": "https://github.com/hhru/eslint-config-hh#readme",
   "dependencies": {
-    "eslint-config-airbnb-base": "~11.0.0",
     "eslint-plugin-dollar-sign": "0.0.5",
     "eslint-plugin-import": "^2.1.0"
   }

@@ -2,8 +2,6 @@
 
 Репозиторий содержит файлы конфигурации для eslint.
 
-За основу мы берем базовую конфигурацию [`eslint-config-airbnb-base`](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base) и оверрайдим правила, которые отличаются.
-
 ## Установка конфигов
 
 Проекты подтягивают этот репозиторий через npm-зависимость.
@@ -12,12 +10,6 @@ Cсылка на конфиг прописывается в `.eslintrc` прое
 ```json
 {
     "extends": "hh"
-}
-```
-для проектов без поддержки es6:
-```json
-{
-    "extends": "hh/legacy"
 }
 ```
 
@@ -31,6 +23,17 @@ Cсылка на конфиг прописывается в `.eslintrc` прое
 
 
 ## История изменений
+
+### 3.0.0
+
+* Поправил конфиг для es6:
+  * Добавил env browser и amd
+  * no-multiple-empty-lines уменьшил кол-во пустых строк до 1 и до 0 в начале файла
+  * no-restricted-properties выключил т.к. у airbnb запрещено использовать isNaN и Math.Pow
+  * arrow-parens - всегда используем () вокруг аргумента
+  * сгенерировал один конфиг файл для es6
+  * dot-notation разрешил использование allowKeywords (можно писать .catch())
+* удалил index.js и legacy.js теперь main из package.json указывает на base.js
 
 ### 2.0.0
 
