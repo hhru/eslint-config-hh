@@ -7,6 +7,8 @@ module.exports = {
         jsxComponents: true
     },
     env: {
+        browser: true,
+        amd: true,
         node: true,
         es6: true
     },
@@ -38,10 +40,7 @@ module.exports = {
             }
         ],
         'dot-notation': [
-            'error',
-            {
-                allowKeywords: false
-            }
+            'error'
         ],
         'dot-location': [
             'error',
@@ -146,11 +145,6 @@ module.exports = {
             {
                 property: '__defineSetter__',
                 message: 'Please use Object.defineProperty instead.'
-            },
-            {
-                object: 'Math',
-                property: 'pow',
-                message: 'Use the exponentiation operator (**) instead.'
             }
         ],
         'no-return-assign': [
@@ -201,8 +195,7 @@ module.exports = {
                 arrays: 'always-multiline',
                 objects: 'always-multiline',
                 imports: 'always-multiline',
-                exports: 'always-multiline',
-                functions: 'always-multiline'
+                exports: 'always-multiline'
             }
         ],
         'no-await-in-loop': 'error',
@@ -348,11 +341,6 @@ module.exports = {
                 includeCommonJSModuleExports: false
             }
         ],
-        'func-names': 0,
-        'func-style': [
-            'off',
-            'expression'
-        ],
         'id-blacklist': 'off',
         'id-length': 'off',
         'id-match': 'off',
@@ -471,8 +459,8 @@ module.exports = {
         'no-multiple-empty-lines': [
             'error',
             {
-                max: 2,
-                maxEOF: 1
+                max: 1,
+                maxBOF: 0
             }
         ],
         'no-negated-condition': 'off',
@@ -666,10 +654,7 @@ module.exports = {
         ],
         'arrow-parens': [
             'error',
-            'as-needed',
-            {
-                requireForBlockBody: true
-            }
+            'always'
         ],
         'arrow-spacing': [
             'error',
@@ -860,21 +845,18 @@ module.exports = {
         'import/no-webpack-loader-syntax': 'error',
         'import/no-unassigned-import': 'off',
         'import/no-named-default': 'error',
-        strict: 'error',
         'dollar-sign/dollar-sign': [
             2,
             'ignoreProperties'
         ]
     },
     parserOptions: {
+        ecmaVersion: 6,
         ecmaFeatures: {
-            globalReturn: true,
+            modules: false,
             generators: false,
-            objectLiteralDuplicateProperties: false,
-            experimentalObjectRestSpread: true
-        },
-        ecmaVersion: 2017,
-        sourceType: 'module'
+            objectLiteralDuplicateProperties: false
+        }
     },
     plugins: [
         'import',
