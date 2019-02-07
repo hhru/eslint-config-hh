@@ -30,8 +30,7 @@ module.exports = {
             'error'
         ],
         curly: [
-            'error',
-            'multi-line'
+            'error'
         ],
         'default-case': [
             0,
