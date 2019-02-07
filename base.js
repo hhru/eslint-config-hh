@@ -482,7 +482,19 @@ module.exports = {
         'no-restricted-syntax': [
             'error',
             'DebuggerStatement',
-            'WithStatement'
+            'WithStatement',
+            "NewExpression[callee.name='Proxy']",
+            "NewExpression[callee.name='WeakSet']",
+            "NewExpression[callee.name='WeakMap']",
+            "NewExpression[callee.name='Int8Array']",
+            "NewExpression[callee.name='Uint8Array']",
+            "NewExpression[callee.name='Uint8ClampedArray']",
+            "NewExpression[callee.name='Int16Array']",
+            "NewExpression[callee.name='Uint16Array']",
+            "NewExpression[callee.name='Int32Array']",
+            "NewExpression[callee.name='Uint32Array']",
+            "NewExpression[callee.name='Float32Array']",
+            "NewExpression[callee.name='Float64Array']"
         ],
         'no-spaced-func': 'error',
         'no-tabs': 'error',
