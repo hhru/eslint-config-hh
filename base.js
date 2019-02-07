@@ -869,6 +869,7 @@ module.exports = {
             'ignoreProperties'
         ]
     },
+    parser: 'babel-eslint',
     parserOptions: {
         ecmaVersion: 6,
         ecmaFeatures: {
