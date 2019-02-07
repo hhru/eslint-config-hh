@@ -144,6 +144,14 @@ module.exports = {
             {
                 property: '__defineSetter__',
                 message: 'Please use Object.defineProperty instead.'
+            },
+            {
+                object: 'Reflect'
+            },
+            {
+                object: 'Array',
+                property: 'from',
+                message: 'Please use spread instead'
             }
         ],
         'no-return-assign': [
