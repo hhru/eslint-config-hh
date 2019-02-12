@@ -24,6 +24,20 @@ Cсылка на конфиг прописывается в `.eslintrc` прое
 
 ## История изменений
 
+### 4.0.0
+
+* Запрещены для использования
+  * [curly](https://eslint.org/docs/rules/curly) всегда error
+  * Reflect
+  * Array.from в пользу spread
+  * Proxy
+  * WeakMap
+  * WeakSet
+  * typed arrays
+  * Generators
+* В качестве парсера используется [babel-eslint](https://www.npmjs.com/package/babel-eslint)
+* В parserOptions включены модули и jsx
+
 ### 3.0.0
 
 * Поправил конфиг для es6:
