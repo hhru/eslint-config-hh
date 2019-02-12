@@ -30,8 +30,7 @@ module.exports = {
             'error'
         ],
         curly: [
-            'error',
-            'multi-line'
+            'error'
         ],
         'default-case': [
             0,
@@ -145,6 +144,14 @@ module.exports = {
             {
                 property: '__defineSetter__',
                 message: 'Please use Object.defineProperty instead.'
+            },
+            {
+                object: 'Reflect'
+            },
+            {
+                object: 'Array',
+                property: 'from',
+                message: 'Please use spread instead'
             }
         ],
         'no-return-assign': [
@@ -475,7 +482,21 @@ module.exports = {
         'no-restricted-syntax': [
             'error',
             'DebuggerStatement',
-            'WithStatement'
+            'WithStatement',
+            "NewExpression[callee.name='Proxy']",
+            "NewExpression[callee.name='WeakSet']",
+            "NewExpression[callee.name='WeakMap']",
+            "NewExpression[callee.name='Int8Array']",
+            "NewExpression[callee.name='Uint8Array']",
+            "NewExpression[callee.name='Uint8ClampedArray']",
+            "NewExpression[callee.name='Int16Array']",
+            "NewExpression[callee.name='Uint16Array']",
+            "NewExpression[callee.name='Int32Array']",
+            "NewExpression[callee.name='Uint32Array']",
+            "NewExpression[callee.name='Float32Array']",
+            "NewExpression[callee.name='Float64Array']",
+            "FunctionDeclaration[generator=true]",
+            "FunctionExpression[generator=true]"
         ],
         'no-spaced-func': 'error',
         'no-tabs': 'error',
@@ -636,7 +657,8 @@ module.exports = {
             'error',
             {
                 vars: 'local',
-                args: 'after-used'
+                args: 'after-used',
+                ignoreRestSiblings: true
             }
         ],
         'no-use-before-define': [
@@ -850,12 +872,12 @@ module.exports = {
             'ignoreProperties'
         ]
     },
+    parser: 'babel-eslint',
     parserOptions: {
         ecmaVersion: 6,
+        sourceType: 'module',
         ecmaFeatures: {
-            modules: false,
-            generators: false,
-            objectLiteralDuplicateProperties: false
+            jsx: true
         }
     },
     plugins: [
