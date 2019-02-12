@@ -872,10 +872,9 @@ module.exports = {
     parser: 'babel-eslint',
     parserOptions: {
         ecmaVersion: 6,
+        sourceType: 'module',
         ecmaFeatures: {
-            modules: false,
-            generators: false,
-            objectLiteralDuplicateProperties: false
+            jsx: true
         }
     },
     plugins: [
