@@ -36,7 +36,8 @@ Cсылка на конфиг прописывается в `.eslintrc` прое
   * typed arrays
   * Generators
 * В качестве парсера используется [babel-eslint](https://www.npmjs.com/package/babel-eslint)
-* В parserOptions включены модули и jsx
+* В [parserOptions](https://eslint.org/docs/user-guide/configuring#specifying-parser-options) включены модули и jsx
+* В no-unused-vars включен [ignoreRestSiblings](https://eslint.org/docs/rules/no-unused-vars#ignorerestsiblings)
 
 ### 3.0.0
 

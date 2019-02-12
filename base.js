@@ -657,7 +657,8 @@ module.exports = {
             'error',
             {
                 vars: 'local',
-                args: 'after-used'
+                args: 'after-used',
+                ignoreRestSiblings: true
             }
         ],
         'no-use-before-define': [
