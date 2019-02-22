@@ -867,6 +867,7 @@ module.exports = {
         'import/no-webpack-loader-syntax': 'error',
         'import/no-unassigned-import': 'off',
         'import/no-named-default': 'error',
+        'import/no-relative-parent-imports': 'error',
         'dollar-sign/dollar-sign': [
             2,
             'ignoreProperties'
