@@ -24,6 +24,9 @@ Cсылка на конфиг прописывается в `.eslintrc` прое
 
 ## История изменений
 
+### 5.0.1
+* Поднята версия зависимости [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import) для поддержки eslint `5.x`
+
 ### 5.0.0
 * Запрещены для использования [относительные импорты](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-relative-parent-imports.md#examples)
 
