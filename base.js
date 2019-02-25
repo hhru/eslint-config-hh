@@ -496,7 +496,8 @@ module.exports = {
             "NewExpression[callee.name='Float32Array']",
             "NewExpression[callee.name='Float64Array']",
             "FunctionDeclaration[generator=true]",
-            "FunctionExpression[generator=true]"
+            "FunctionExpression[generator=true]",
+            'ImportDeclaration[source.value=/\\.\\./]'
         ],
         'no-spaced-func': 'error',
         'no-tabs': 'error',
