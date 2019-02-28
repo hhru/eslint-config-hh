@@ -13,9 +13,13 @@
     "url": "https://github.com/hhru/eslint-config-hh/issues"
   },
   "homepage": "https://github.com/hhru/eslint-config-hh#readme",
+  "peerDependencies": {
+    "eslint": ">= 4.12.1"
+  },
   "dependencies": {
+    "babel-eslint": "10.0.1",
     "eslint-plugin-dollar-sign": "1.0.1",
     "eslint-plugin-import": "2.16.0",
-    "babel-eslint": "10.0.1"
+    "eslint-plugin-react-hooks": "1.3.0"
   }
 }

@@ -27,6 +27,8 @@ Cсылка на конфиг прописывается в `.eslintrc` прое
 ### 5.0.0
 * Запрещены для использования относительные импорты в родительскую директорию (содержащие `..`)
 * Поднята версия зависимости [eslint-plugin-import](https://www.npmjs.com/package/eslint-plugin-import) для поддержки eslint `5.x`
+* Добавлены правила для [react hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+* Добавлена peerDependency на `eslint >= 4.12.1`
 
 ### 4.0.0
 

@@ -923,7 +923,8 @@ module.exports = {
         'dollar-sign/dollar-sign': [
             2,
             'ignoreProperties'
-        ]
+        ],
+        'react-hooks/rules-of-hooks': 'error',
     },
     parser: 'babel-eslint',
     parserOptions: {
@@ -935,7 +936,8 @@ module.exports = {
     },
     plugins: [
         'import',
-        'dollar-sign'
+        'dollar-sign',
+        'react-hooks'
     ],
     settings: {
         'import/resolver': {
