@@ -481,22 +481,75 @@ module.exports = {
         ],
         'no-restricted-syntax': [
             'error',
-            'DebuggerStatement',
-            'WithStatement',
-            "NewExpression[callee.name='Proxy']",
-            "NewExpression[callee.name='WeakSet']",
-            "NewExpression[callee.name='WeakMap']",
-            "NewExpression[callee.name='Int8Array']",
-            "NewExpression[callee.name='Uint8Array']",
-            "NewExpression[callee.name='Uint8ClampedArray']",
-            "NewExpression[callee.name='Int16Array']",
-            "NewExpression[callee.name='Uint16Array']",
-            "NewExpression[callee.name='Int32Array']",
-            "NewExpression[callee.name='Uint32Array']",
-            "NewExpression[callee.name='Float32Array']",
-            "NewExpression[callee.name='Float64Array']",
-            "FunctionDeclaration[generator=true]",
-            "FunctionExpression[generator=true]"
+            {
+                "selector": 'DebuggerStatement',
+                'message': 'Do not use debugger'
+            },
+            {
+                "selector": "WithStatement",
+                "message": "Do not use with"
+            },
+            {
+                "selector": "NewExpression[callee.name='Proxy']",
+                "message": "Do not use Proxy"
+            },
+            {
+                "selector": "NewExpression[callee.name='WeakSet']",
+                "message": "Do not use WeakSet"
+            },
+            {
+                "selector": "NewExpression[callee.name='WeakMap']",
+                "message": "Do not use WeakMap"
+            },
+            {
+                "selector": "NewExpression[callee.name='Int8Array']",
+                "message": "Do not use typed arrays"
+            },
+            {
+                "selector": "NewExpression[callee.name='Uint8Array']",
+                "message": "Do not use typed arrays"
+            },
+            {
+                "selector": "NewExpression[callee.name='Uint8ClampedArray']",
+                "message": "Do not use typed arrays"
+            },
+            {
+                "selector": "NewExpression[callee.name='Int16Array']",
+                "message": "Do not use typed arrays"
+            },
+            {
+                "selector": "NewExpression[callee.name='Uint16Array']",
+                "message": "Do not use typed arrays"
+            },
+            {
+                "selector": "NewExpression[callee.name='Int32Array']",
+                "message": "Do not use typed arrays"
+            },
+            {
+                "selector": "NewExpression[callee.name='Uint32Array']",
+                "message": "Do not use typed arrays"
+            },
+            {
+                "selector": "NewExpression[callee.name='Float32Array']",
+                "message": "Do not use typed arrays"
+            },
+            {
+                "selector": "NewExpression[callee.name='Float64Array']",
+                "message": "Do not use typed arrays"
+            },
+            {
+                "selector": "FunctionDeclaration[generator=true]",
+                "message": "Do not use generators"
+            },
+            {
+                "selector": "FunctionExpression[generator=true]",
+                "message": "Do not use generators"
+            },
+            {
+                "selector": "ImportDeclaration[source.value=/\\.\\./]",
+                "message": "Do not use relative imports"
+            },
+
         ],
         'no-spaced-func': 'error',
         'no-tabs': 'error',
@@ -870,7 +923,8 @@ module.exports = {
         'dollar-sign/dollar-sign': [
             2,
             'ignoreProperties'
-        ]
+        ],
+        'react-hooks/rules-of-hooks': 'error',
     },
     parser: 'babel-eslint',
     parserOptions: {
@@ -882,7 +936,8 @@ module.exports = {
     },
     plugins: [
         'import',
-        'dollar-sign'
+        'dollar-sign',
+        'react-hooks'
     ],
     settings: {
         'import/resolver': {
