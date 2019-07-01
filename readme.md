@@ -26,6 +26,7 @@ Cсылка на конфиг прописывается в `.eslintrc` прое
 
 ### 6.0.0
 * Добавлено правило `exhaustive-deps` для `react-hooks`
+* Поднята версия зависимости [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
 
 ### 5.0.2
 * Запрещены для использования относительные импорты в родительскую директорию (содержащие `..`)
