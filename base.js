@@ -925,6 +925,7 @@ module.exports = {
             'ignoreProperties'
         ],
         'react-hooks/rules-of-hooks': 'error',
+        'react-hooks/exhaustive-deps': 'error',
     },
     parser: 'babel-eslint',
     parserOptions: {
