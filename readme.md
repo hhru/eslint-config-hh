@@ -24,6 +24,14 @@ Cсылка на конфиг прописывается в `.eslintrc` прое
 
 ## История изменений
 
+### 6.1.0
+* Подняты версии зависимостей для поддержки eslint 6:
+    * babel-eslint
+    * eslint-plugin-dollar-sign
+    * eslint-plugin-import
+    * eslint-plugin-react-hooks
+
+
 ### 6.0.0
 * Добавлено правило `exhaustive-deps` для `react-hooks`
 * Поднята версия зависимости [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
