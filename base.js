@@ -546,7 +546,7 @@ module.exports = {
                 "message": "Do not use generators"
             },
             {
-                "selector": "ImportDeclaration[source.value=/\\.\\./]",
+                "selector": "ImportDeclaration[source.value=/\\./]",
                 "message": "Do not use relative imports"
             },
 
