@@ -545,11 +545,6 @@ module.exports = {
                 "selector": "FunctionExpression[generator=true]",
                 "message": "Do not use generators"
             },
-            {
-                "selector": "ImportDeclaration[source.value=/\\./]",
-                "message": "Do not use relative imports"
-            },
-
         ],
         'no-spaced-func': 'error',
         'no-tabs': 'error',
@@ -757,7 +752,12 @@ module.exports = {
         'no-dupe-class-members': 'error',
         'no-duplicate-imports': 'off',
         'no-new-symbol': 'error',
-        'no-restricted-imports': 'off',
+        'no-restricted-imports': [
+            'error',
+            {
+                patterns: ['./*', '..']
+            }
+        ],
         'no-this-before-super': 'error',
         'no-useless-computed-key': 'error',
         'no-useless-constructor': 'error',
