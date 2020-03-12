@@ -351,14 +351,6 @@ module.exports = {
         'id-blacklist': 'off',
         'id-length': 'off',
         'id-match': 'off',
-        indent: [
-            'error',
-            4,
-            {
-                SwitchCase: 1,
-                VariableDeclarator: 1
-            }
-        ],
         'jsx-quotes': [
             'off',
             'prefer-double'
@@ -403,10 +395,6 @@ module.exports = {
         'max-depth': [
             'off',
             4
-        ],
-        'max-len': [
-            'error',
-            120
         ],
         'max-lines': [
             'off',
@@ -456,12 +444,6 @@ module.exports = {
         'no-continue': 'error',
         'no-inline-comments': 'off',
         'no-lonely-if': 'error',
-        'no-mixed-operators': [
-            'error',
-            {
-                allowSamePrecedence: true
-            }
-        ],
         'no-mixed-spaces-and-tabs': 'error',
         'no-multiple-empty-lines': [
             'error',
@@ -563,10 +545,6 @@ module.exports = {
             }
         ],
         'no-whitespace-before-property': 'error',
-        'object-curly-spacing': [
-            'error',
-            'never'
-        ],
         'object-curly-newline': [
             'off',
             {
@@ -598,27 +576,9 @@ module.exports = {
             'error',
             'always'
         ],
-        'operator-linebreak': [
-            'error',
-            'after'
-        ],
         'padded-blocks': [
             0,
             'never'
-        ],
-        'quote-props': [
-            'error',
-            'as-needed',
-            {
-                keywords: true
-            }
-        ],
-        quotes: [
-            'error',
-            'single',
-            {
-                avoidEscape: true
-            }
         ],
         'require-jsdoc': 'off',
         semi: [
@@ -642,10 +602,6 @@ module.exports = {
         ],
         'sort-vars': 'off',
         'space-before-blocks': 'error',
-        'space-before-function-paren': [
-            'error',
-            'never'
-        ],
         'space-in-parens': [
             'error',
             'never'
@@ -742,12 +698,6 @@ module.exports = {
             }
         ],
         'no-class-assign': 'error',
-        'no-confusing-arrow': [
-            'error',
-            {
-                allowParens: true
-            }
-        ],
         'no-const-assign': 'error',
         'no-dupe-class-members': 'error',
         'no-duplicate-imports': 'off',
