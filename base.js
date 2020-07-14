@@ -350,7 +350,15 @@ module.exports = {
         ],
         'id-blacklist': 'off',
         'id-length': 'off',
-        'id-match': 'off',
+        'id-match': [
+            'error',
+            '^[a-zA-Z0-9_$]*$',
+            {
+                properties: true,
+                onlyDeclarations: false,
+                ignoreDestructuring: true
+            }
+        ],
         'jsx-quotes': [
             'off',
             'prefer-double'
