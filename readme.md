@@ -24,6 +24,10 @@ Cсылка на конфиг прописывается в `.eslintrc` прое
 
 ## История изменений
 
+### 9.0.0
+
+* Запрет использования `.js` расширения для файлов, содержащих `JSX` код [react/jsx-filename-extension](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md)
+
 ### 8.1.1
 
 * Обновлен lodash в зависимостях на 4.17.19

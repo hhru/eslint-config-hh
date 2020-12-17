@@ -884,6 +884,7 @@ module.exports = {
         ],
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
+        'react/jsx-filename-extension': 'error',
     },
     parser: 'babel-eslint',
     parserOptions: {
@@ -896,7 +897,8 @@ module.exports = {
     plugins: [
         'import',
         'dollar-sign',
-        'react-hooks'
+        'react-hooks',
+        'react',
     ],
     settings: {
         'import/resolver': {
