@@ -1,6 +1,6 @@
 {
   "name": "@hh.ru/eslint-config",
-  "version": "8.1.1",
+  "version": "9.0.0",
   "main": "base.js",
   "description": "HH.ru eslint configuration",
   "scripts": {},
@@ -14,12 +14,12 @@
   },
   "homepage": "https://github.com/hhru/eslint-config-hh#readme",
   "peerDependencies": {
-    "eslint": ">= 4.12.1"
+    "eslint": ">= 6.0.0"
   },
   "dependencies": {
-    "babel-eslint": "10.0.3",
+    "@babel/eslint-parser": "7.14.2",
     "eslint-plugin-dollar-sign": "1.0.2",
-    "eslint-plugin-import": "2.18.2",
-    "eslint-plugin-react-hooks": "1.7.0"
+    "eslint-plugin-import": "2.23.2",
+    "eslint-plugin-react-hooks": "4.2.0"
   }
 }
