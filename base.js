@@ -885,13 +885,10 @@ module.exports = {
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
     },
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
     parserOptions: {
         ecmaVersion: 6,
         sourceType: 'module',
-        ecmaFeatures: {
-            jsx: true
-        }
     },
     plugins: [
         'import',
