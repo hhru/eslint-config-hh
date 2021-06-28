@@ -840,7 +840,9 @@ module.exports = {
             'always',
             {
                 js: 'never',
-                jsx: 'never'
+                jsx: 'never',
+                ts: 'never',
+                tsx: 'never'
             }
         ],
         'import/order': [
