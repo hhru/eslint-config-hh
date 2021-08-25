@@ -25,5 +25,12 @@ module.exports = {
         '@typescript-eslint/no-unused-vars': ['error', { vars: 'local', args: 'after-used', ignoreRestSiblings: true }],
         'etc/prefer-interface': ['error', { allowLocal: true }],
         'etc/no-misused-generics': 'error',
+        '@typescript-eslint/naming-convention': [
+            'error',
+            {
+                selector: ['typeLike', 'enumMember'],
+                format: ['PascalCase'],
+            },
+        ],
     },
 };
