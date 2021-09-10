@@ -3,7 +3,9 @@
   "version": "10.1.0",
   "main": "base.js",
   "description": "HH.ru eslint configuration",
-  "scripts": {},
+  "scripts": {
+    "release": "npm publish --access=public"
+  },
   "license": "MIT",
   "repository": {
     "type": "git",
