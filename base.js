@@ -713,7 +713,7 @@ module.exports = {
         'no-restricted-imports': [
             'error',
             {
-                patterns: ['./*', '!./*.less', '..']
+                patterns: ['./*', '**/*.less', '!./*.less', '..']
             }
         ],
         'no-this-before-super': 'error',
