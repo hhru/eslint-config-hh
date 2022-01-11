@@ -888,6 +888,7 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'react/jsx-uses-react': 'off',
         'react/react-in-jsx-scope': 'off',
+        '@hh.ru/import-rules/hh-import-order': 'error',
     },
     parser: '@babel/eslint-parser',
     parserOptions: {
@@ -897,7 +898,8 @@ module.exports = {
     plugins: [
         'import',
         'dollar-sign',
-        'react-hooks'
+        'react-hooks',
+        '@hh.ru/import-rules',
     ],
     settings: {
         'import/resolver': {
