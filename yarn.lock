@@ -11,10 +11,10 @@
     eslint-visitor-keys "^2.1.0"
     semver "^6.3.0"
 
-"@hh.ru/eslint-plugin-import-rules@1.4.0":
-  version "1.4.0"
-  resolved "https://npm.pyn.ru/@hh.ru%2feslint-plugin-import-rules/-/eslint-plugin-import-rules-1.4.0.tgz#03d05123761a3ef23d68fd2fe93147423a044529"
-  integrity sha512-osdvFBiRdmMypWUQS5XCPv5fkevTSCLup+mSELbyUiNXn0dSKyzGqSAyV5Yy3+z2LSatqt/CfIziIXNb5NqpUA==
+"@hh.ru/eslint-plugin-import-rules@1.4.1":
+  version "1.4.1"
+  resolved "https://npm.pyn.ru/@hh.ru%2feslint-plugin-import-rules/-/eslint-plugin-import-rules-1.4.1.tgz#40890d1e5d663f19ae63b6a9ada963ff24529c8c"
+  integrity sha512-X0EsJc6Xtag9Rmo0xJAXQa86yNaUh6y1a7CWbOzsbpBd5r582iSictbZz2KDRX0y7fRK6FzWYykgDaedK9kmgQ==
   dependencies:
     eslint-module-utils "^2.6.0"
     eslint-plugin-import "^2.25.3"
