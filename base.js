@@ -919,5 +919,13 @@ module.exports = {
             'node_modules',
             '\\.(coffee|scss|css|less|hbs|svg|json)$'
         ]
-    }
+    },
+    overrides: [
+        {
+            files: ['*.ts', '*.js'],
+            rules: {
+                'import/prefer-default-export': 'off',
+            },
+        },
+    ],
 };
