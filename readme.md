@@ -36,6 +36,12 @@ Cсылка на конфиг прописывается в `.eslintrc` прое
 
 ## История изменений
 
+### 13.2.0
+
+* Подняты версии зависимостей для поддержки typescript 4.9.5
+  * @typescript-eslint/eslint-plugin
+  * @typescript-eslint/parser
+
 ### 13.1.0
 
 * Добавлено игнорирование `import/prefer-default-export` правила для `*.js` и `*.ts` файлов.
