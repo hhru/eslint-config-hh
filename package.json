@@ -21,8 +21,8 @@
   "dependencies": {
     "@babel/eslint-parser": "7.14.2",
     "@hh.ru/eslint-plugin-import-rules": "1.4.1",
-    "@typescript-eslint/eslint-plugin": "4.28.1",
-    "@typescript-eslint/parser": "4.28.1",
+    "@typescript-eslint/eslint-plugin": "5.51.0",
+    "@typescript-eslint/parser": "5.51.0",
     "eslint-plugin-dollar-sign": "1.0.2",
     "eslint-plugin-etc": "1.5.2",
     "eslint-plugin-import": "2.23.2",
