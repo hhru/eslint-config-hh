@@ -888,6 +888,12 @@ module.exports = {
         'react-hooks/exhaustive-deps': 'error',
         'react/jsx-uses-react': 'off',
         'react/react-in-jsx-scope': 'off',
+        '@dword-design/import-alias/prefer-alias': [
+            'error',
+            {
+                alias: { '@hh.ru/bloko/build': 'bloko' },
+            },
+        ],
         '@hh.ru/import-rules/hh-import-order': 'error',
     },
     parser: '@babel/eslint-parser',
@@ -900,6 +906,7 @@ module.exports = {
         'dollar-sign',
         'react-hooks',
         '@hh.ru/import-rules',
+        '@dword-design/import-alias',
     ],
     settings: {
         'import/resolver': {
