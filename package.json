@@ -20,8 +20,7 @@
   },
   "dependencies": {
     "@babel/eslint-parser": "7.14.2",
-    "@dword-design/eslint-plugin-import-alias": "3.0.3",
-    "@hh.ru/eslint-plugin-import-rules": "1.4.1",
+    "@hh.ru/eslint-plugin-import-rules": "1.5.2",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",
     "eslint-plugin-dollar-sign": "1.0.2",
