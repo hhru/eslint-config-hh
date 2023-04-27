@@ -12,6 +12,7 @@ module.exports = {
         node: true,
         es6: true
     },
+    extends: ['prettier'],
     rules: {
         'accessor-pairs': 'off',
         'array-callback-return': 'error',
@@ -894,6 +895,7 @@ module.exports = {
             ]
         }],
         '@hh.ru/import-rules/hh-import-order': 'error',
+        'prettier/prettier': ['error'],
     },
     parser: '@babel/eslint-parser',
     parserOptions: {
@@ -905,6 +907,7 @@ module.exports = {
         'dollar-sign',
         'react-hooks',
         '@hh.ru/import-rules',
+        'prettier',
     ],
     settings: {
         'import/resolver': {
