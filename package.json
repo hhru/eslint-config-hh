@@ -16,13 +16,16 @@
   },
   "homepage": "https://github.com/hhru/eslint-config-hh#readme",
   "peerDependencies": {
-    "eslint": ">= 6.0.0"
+    "@babel/core": "^7.11.0",
+    "eslint": "^7.5.0"
   },
   "devDependencies": {
+    "@babel/core": "7.21.4",
+    "eslint": "7.32.0",
     "typescript": "4.9.5"
   },
   "dependencies": {
-    "@babel/eslint-parser": "7.14.2",
+    "@babel/eslint-parser": "7.21.3",
     "@hh.ru/eslint-plugin-import-rules": "1.5.2",
     "@typescript-eslint/eslint-plugin": "5.51.0",
     "@typescript-eslint/parser": "5.51.0",
