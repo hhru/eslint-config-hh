@@ -715,7 +715,15 @@ module.exports = {
             'error',
             {
                 patterns: ['./*', '**/*.less', '!./*.less', '..']
-            }
+            },
+            {
+                name: 'date-fns',
+                message: "Please use 'date-fns/module_name' instead",
+            },
+            {
+                name: 'date-fns/locale',
+                message: "Please use 'date-fns/locale/locale-name' instead",
+            },
         ],
         'no-this-before-super': 'error',
         'no-useless-computed-key': 'error',
