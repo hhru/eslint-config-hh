@@ -37,5 +37,6 @@
   "dependencies": {
     "@hh.ru/eslint-plugin-import-rules": "1.5.2",
     "prettier": "2.8.7"
-  }
+  },
+  "private": true
 }
