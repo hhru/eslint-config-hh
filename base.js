@@ -763,13 +763,17 @@ module.exports = {
         ],
         '@hh.ru/import-rules/hh-import-order': 'error',
         'prettier/prettier': ['error'],
+        'promise/catch-or-return': [
+            'error',
+            { allowThen: true, terminationMethod: ['catch', 'asCallback', 'finally'] },
+        ],
     },
     parser: '@babel/eslint-parser',
     parserOptions: {
         ecmaVersion: 6,
         sourceType: 'module',
     },
-    plugins: ['import', 'dollar-sign', 'react-hooks', '@hh.ru/import-rules', 'prettier'],
+    plugins: ['import', 'dollar-sign', 'react-hooks', '@hh.ru/import-rules', 'promise', 'prettier'],
     settings: {
         'import/resolver': {
             node: {
