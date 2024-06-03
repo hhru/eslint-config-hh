@@ -1,4 +1,4 @@
-version: 15.1.2
+version: 15.2.0
 build_image: registry.pyn.ru/node18-bullseye-building:2022.12.26
 update_method: npm_update
 build_method: npm_build
