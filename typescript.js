@@ -38,6 +38,6 @@ module.exports = {
                 checksVoidReturn: false,
             },
         ],
-        '@typescript-eslint/no-floating-promises': ['error', { ignoreVoid: false, ignoreIIFE: false }],
+        '@typescript-eslint/no-floating-promises': ['error', { ignoreVoid: true, ignoreIIFE: false }],
     },
 };
