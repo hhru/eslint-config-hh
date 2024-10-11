@@ -762,6 +762,7 @@ module.exports = {
             },
         ],
         '@hh.ru/import-rules/hh-import-order': 'error',
+        '@hh.ru/import-rules/no-direct-spa-functions': 'error',
         'prettier/prettier': ['error'],
         'promise/catch-or-return': [
             'error',
