@@ -37,5 +37,6 @@
   "dependencies": {
     "@hh.ru/eslint-plugin-import-rules": "git+ssh://git@github.com/hhru/eslint-plugin-import-rules.git#8cdf8b9566cb8684dabebd241e68289edbc06294",
     "prettier": "2.8.7"
-  }
+  },
+  "private": true
 }
