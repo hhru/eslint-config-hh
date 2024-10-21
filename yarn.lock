@@ -226,10 +226,10 @@
   resolved "https://npm.pyn.ru/@eslint%2fjs/-/js-8.55.0.tgz#b721d52060f369aa259cf97392403cb9ce892ec6"
   integrity sha512-qQfo2mxH5yVom1kacMtZZJFVdW+E70mqHMJvVg6WTLo+VBuQJ4TojZlfWBjK0ve5BdEeNAVxOsl/nvNMpJOaJA==
 
-"@hh.ru/eslint-plugin-import-rules@1.5.2":
-  version "1.5.2"
-  resolved "https://npm.pyn.ru/@hh.ru%2feslint-plugin-import-rules/-/eslint-plugin-import-rules-1.5.2.tgz#60773b467818085e11ba09b83a9f5675df1a8fb3"
-  integrity sha512-KfxrwJuLIsY76yHUsWI01ldXL/imMMDPB3VSRoti8bjM/5hizu2UCtQzAwyttxRnUgkaKuhi5xtHjNn6sILpVQ==
+"@hh.ru/eslint-plugin-import-rules@1.6.0":
+  version "1.6.0"
+  resolved "https://npm.pyn.ru/@hh.ru%2feslint-plugin-import-rules/-/eslint-plugin-import-rules-1.6.0.tgz#f7bba2ab5abf8a924d3d5055accc562f7e07d3fb"
+  integrity sha512-YESBsTi1Rz16foIfs3RxYxMji4X2Zu0doGA+7Z0dtmt17m2b3swsd07Ir0zvcPtwQ46AvlrQgNGasAMCGb0q3A==
   dependencies:
     eslint-module-utils "^2.6.0"
     eslint-plugin-import "^2.25.3"
