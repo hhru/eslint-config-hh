@@ -8,7 +8,6 @@ module.exports = {
         sourceType: 'module',
     },
     rules: {
-        'react/prop-types': 'off',
         'no-use-before-define': 'off',
         '@typescript-eslint/no-use-before-define': [
             'error',
@@ -21,8 +20,6 @@ module.exports = {
         '@typescript-eslint/no-explicit-any': 'error',
         '@typescript-eslint/explicit-module-boundary-types': 'error',
         '@typescript-eslint/no-non-null-assertion': 'error',
-        'no-unused-vars': 'off',
-        '@typescript-eslint/no-unused-vars': ['error', { vars: 'local', args: 'after-used', ignoreRestSiblings: true }],
         'etc/prefer-interface': ['error', { allowLocal: true }],
         'etc/no-misused-generics': 'error',
         '@typescript-eslint/naming-convention': [
@@ -39,5 +36,21 @@ module.exports = {
             },
         ],
         '@typescript-eslint/no-floating-promises': ['error', { ignoreVoid: true, ignoreIIFE: false }],
+        '@typescript-eslint/no-unused-expressions': ['error', { allowShortCircuit: true }],
+        '@typescript-eslint/no-unused-vars': [
+            'error',
+            {
+                args: 'after-used',
+                argsIgnorePattern: '^_',
+                varsIgnorePattern: '^_',
+                caughtErrorsIgnorePattern: '^_',
+                destructuredArrayIgnorePattern: '^_',
+                ignoreRestSiblings: true,
+            },
+        ],
+        '@typescript-eslint/no-unsafe-enum-comparison': 'off',
+        '@typescript-eslint/unbound-method': 'off',
+        '@typescript-eslint/no-redundant-type-constituents': 'off',
+        '@typescript-eslint/no-duplicate-type-constituents': 'off',
     },
 };
