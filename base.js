@@ -140,12 +140,7 @@ module.exports = {
         'no-sequences': 'error',
         'no-throw-literal': 'error',
         'no-unmodified-loop-condition': 'off',
-        'no-unused-expressions': [
-            'error',
-            {
-                allowShortCircuit: true,
-            },
-        ],
+        'no-unused-expressions': 'off',
         'no-unused-labels': 'error',
         'no-useless-call': 'off',
         'no-useless-concat': 'error',
@@ -750,10 +745,11 @@ module.exports = {
         'import/no-webpack-loader-syntax': 'error',
         'import/no-unassigned-import': 'off',
         'import/no-named-default': 'error',
-        'dollar-sign/dollar-sign': [2, 'ignoreProperties'],
         'react-hooks/rules-of-hooks': 'error',
         'react-hooks/exhaustive-deps': 'error',
         'react/jsx-uses-react': 'off',
+        'react/prop-types': 'off',
+        'react/require-render-return': 'off',
         'react/react-in-jsx-scope': 'off',
         '@hh.ru/import-rules/prefer-import-aliases': [
             'error',
@@ -763,6 +759,13 @@ module.exports = {
         ],
         '@hh.ru/import-rules/hh-import-order': 'error',
         '@hh.ru/import-rules/no-direct-spa-functions': 'error',
+        '@hh.ru/import-rules/no-internal-modules': [
+            'error',
+            {
+                paths: ['(?:src/pages/[^/]*)'],
+                exclusions: ['(?:src/app/routes.js)'],
+            },
+        ],
         'prettier/prettier': ['error'],
         'promise/catch-or-return': [
             'error',
@@ -774,7 +777,7 @@ module.exports = {
         ecmaVersion: 6,
         sourceType: 'module',
     },
-    plugins: ['import', 'dollar-sign', 'react-hooks', '@hh.ru/import-rules', 'promise', 'prettier'],
+    plugins: ['import', 'react-hooks', '@hh.ru/import-rules', 'promise', 'prettier'],
     settings: {
         'import/resolver': {
             node: {
