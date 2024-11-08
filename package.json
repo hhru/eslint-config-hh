@@ -1,6 +1,6 @@
 {
   "name": "@hh.ru/eslint-config",
-  "version": "16.0.0",
+  "version": "16.0.0-9dbdbb1059b5a0edb9435fdb19becfe48a57acfc",
   "main": "base.js",
   "description": "HH.ru eslint configuration",
   "scripts": {
