@@ -1,3 +1,7 @@
+> [!WARNING] 
+> Репо больше не актуален, мы перенесли его в основной monorepository c фронтенд пакетами. 
+> Пакет, все также публикуется в [npm](https://www.npmjs.com/package/@hh.ru/eslint-config)
+
 # eslint конфиги hh.ru
 
 Репозиторий содержит файлы конфигурации для eslint.
